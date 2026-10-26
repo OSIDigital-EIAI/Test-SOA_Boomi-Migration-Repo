@@ -1,0 +1,8 @@
+﻿"Rule ID","Mapping","Target field","Source","Type","Condition","Function","Complexity","Notes"
+"MR-001","OTBI rowset to ExternalIdentifier DAT","METADATA / ExternalIdentifier / ExternalIdentifierSequence","(none)","hardcoded","","""MERGE"" / ""ExternalIdentifier"" / ""1""","low",""
+"MR-002","OTBI rowset to ExternalIdentifier DAT","PersonNumber","Column3","passthrough","","","low",""
+"MR-003","OTBI rowset to ExternalIdentifier DAT","ExternalIdentifierNumber","Column1 (legal employer), Column2 (location), Column3","conditional","TaskUs USA LLC + Santa Monica / TaskUs USA LLC / TaskUs Inc.","""MX4"" / ""6PZ"" / ""AK0"" + substring(PersonNumber, 2)","medium","Empty for other employers."
+"MR-004","OTBI rowset to ExternalIdentifier DAT","ExternalIdentifierType","(none)","hardcoded","","""ORA_3RD_PARTY_PAY_ID""","low",""
+"MR-005","OTBI rowset to ExternalIdentifier DAT","AssignmentNumber","Column4","passthrough","","","low",""
+"MR-006","OTBI rowset to ExternalIdentifier DAT","DateFrom / DateTo","(current time)","calculated","","now (yyyy/MM/dd HH:mm:ss) / ""4712/12/31 11:59:00""","low","Not the assignment start date."
+"MR-007","OTBI rowset to ExternalIdentifier DAT","SourceSystemId / SourceSystemOwner","Column4","calculated","","""EXT_"" + substring-after(Column4, ""ASSIGNMENT_"") / ""TASKUS""","low",""

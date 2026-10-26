@@ -1,0 +1,6 @@
+﻿"Rule ID","Mapping","Target field","Source","Type","Condition","Function","Complexity","Notes"
+"MR-001","File notification request to email with attachment","To recipients","/process/Email","transformed","","split on "","" and trim","low","All as To."
+"MR-002","File notification request to email with attachment","Subject","/process/Subject","passthrough","","","low",""
+"MR-003","File notification request to email with attachment","Attachment","/process/FilePath","transformed","FilePath present and file readable","FileDataSource(FilePath); attachment name = file name","low","In Boomi the document itself is the attachment and DDP_FileName carries the name."
+"MR-004","File notification request to email with attachment","Body text","(none)","hardcoded","","empty string","low",""
+"MR-005","File notification request to email with attachment","From","(none)","hardcoded","","svc.soa@taskus.com","low",""

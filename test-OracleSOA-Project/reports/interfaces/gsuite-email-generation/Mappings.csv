@@ -1,0 +1,4 @@
+﻿"Rule ID","Mapping","Target field","Source","Type","Condition","Function","Complexity","Notes"
+"MR-001","Candidate email generation","candidate Email (loop)","process/Email, counter","looped","Address taken by another employee","local + (""0""+counter if counter < 10 else counter) + ""@"" + domain; counter starts at 2","medium",""
+"MR-002","Candidate email generation","Status","Google user externalIds value","conditional","'= EmployeeID","""Existing""","low",""
+"MR-003","Candidate email generation","Email","candidate","passthrough","Not found or Existing","","low",""

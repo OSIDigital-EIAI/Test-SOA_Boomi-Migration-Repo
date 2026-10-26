@@ -1,0 +1,6 @@
+﻿"Rule ID","Mapping","Target field","Source","Type","Condition","Function","Complexity","Notes"
+"MR-001","Update request to LDAP modify","dn","DN, OTBI Column4 (project ID)","conditional","OU found","DN + "","" + OUNames(project ID); else DN + "",OU=Floating,OU=Operations,OU=Users,OU=TaskUs,DC=taskus,DC=prv""","medium",""
+"MR-002","Update request to LDAP modify","modifyAttributes/department/method","(none)","hardcoded","","""replace""","low","Department_Method from the input is ignored."
+"MR-003","Update request to LDAP modify","modifyAttributes/department/attributeValue/value","Department, overwritten by OTBI Column1","conditional","OTBI runs only when Employee_Email is not empty","","low",""
+"MR-004","Update request to LDAP modify","modifyAttributes/displayName/method","DisplayName_Method","passthrough","","","low",""
+"MR-005","Update request to LDAP modify","modifyAttributes/displayName/attributeValue/value","DisplayName","passthrough","","","low",""

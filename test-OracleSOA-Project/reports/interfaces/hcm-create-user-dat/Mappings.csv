@@ -1,0 +1,6 @@
+﻿"Rule ID","Mapping","Target field","Source","Type","Condition","Function","Complexity","Notes"
+"MR-001","User request to HDL User.dat","Header line","(none)","hardcoded","","""METADATA|User|PersonNumber|Username""","low","First Details record."
+"MR-002","User request to HDL User.dat","METADATA","(none)","hardcoded","","""MERGE""","low",""
+"MR-003","User request to HDL User.dat","User","(none)","hardcoded","","""User""","low",""
+"MR-004","User request to HDL User.dat","PersonNumber","process/Input/PersonNumber","looped","","","low","One row per Input."
+"MR-005","User request to HDL User.dat","Username","process/Input/Username","looped","","","low","AD sAMAccountName."

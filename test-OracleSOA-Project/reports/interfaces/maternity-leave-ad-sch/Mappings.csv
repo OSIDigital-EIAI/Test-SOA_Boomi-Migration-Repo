@@ -1,0 +1,5 @@
+﻿"Rule ID","Mapping","Target field","Source","Type","Condition","Function","Complexity","Notes"
+"MR-001","Absence rows to AD OU update request","CN","Column8, Column9 (First Name, Last Name)","transformed","","concat with a space","low","ad-update-ou expects its own CN form (see that interface); format to confirm."
+"MR-002","Absence rows to AD OU update request","Employee_ID","Column1 (Person Number)","passthrough","","","low",""
+"MR-003","Absence rows to AD OU update request","Status","(constant)","hardcoded","Start of leave","""Temporary""; not set for end of leave","low",""
+"MR-004","Absence rows to AD OU update request","Action","(constant)","hardcoded","Start / end","""Inactive"" at start, ""Active"" at end","low",""

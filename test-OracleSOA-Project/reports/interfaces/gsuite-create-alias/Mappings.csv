@@ -1,0 +1,4 @@
+﻿"Rule ID","Mapping","Target field","Source","Type","Condition","Function","Complexity","Notes"
+"MR-001","Alias request and response","alias","process/alias","passthrough","","","low",""
+"MR-002","Alias request and response","URI userKey","process/email","passthrough","","","low","Property name mismatch in legacy."
+"MR-003","Alias request and response","response alias/kind/etag/id","Google reply","passthrough","","","low",""

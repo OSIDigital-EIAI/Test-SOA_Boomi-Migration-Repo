@@ -1,0 +1,6 @@
+﻿"Rule ID","Mapping","Target field","Source","Type","Condition","Function","Complexity","Notes"
+"MR-001","OTBI starter row to User.dat record","METADATA","(none)","hardcoded","AD account found","""MERGE""","low",""
+"MR-002","OTBI starter row to User.dat record","User","(none)","hardcoded","","""User""","low",""
+"MR-003","OTBI starter row to User.dat record","PersonNumber","Row/Column1","passthrough","","","low",""
+"MR-004","OTBI starter row to User.dat record","Username","Row/Column2, Column3, Column1","calculated","","lower(first char First Name)+lower(first char Last Name)+Person Number","medium","Same rule used for the LDAP filter; legacy idiom substring-before(x,substring(x,2))."
+"MR-005","OTBI starter row to User.dat record","File header","(none)","hardcoded","","""METADATA|User|PersonNumber|Username""","low",""

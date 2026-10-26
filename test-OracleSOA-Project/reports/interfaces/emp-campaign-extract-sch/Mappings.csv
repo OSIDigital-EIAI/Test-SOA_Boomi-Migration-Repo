@@ -1,0 +1,7 @@
+﻿"Rule ID","Mapping","Target field","Source","Type","Condition","Function","Complexity","Notes"
+"MR-001","Schedule window to HCM submitFlow","submitFlow/flowName","(none)","hardcoded","","""Camapign""","low","Spelling must match the HCM flow."
+"MR-002","Schedule window to HCM submitFlow","parameterValues[1] ParameterName / ParameterValue","process/DateTime","transformed","","name ""Effective Date""; value = window start date (yyyy-MM-dd, from substring-before(start_date_time,""T""))","low",""
+"MR-003","Schedule window to HCM submitFlow","parameterValues[2] ParameterName / ParameterValue","(none)","hardcoded","","""Changes only"" = ""Y""","low",""
+"MR-004","Schedule window to HCM submitFlow","submitFlow/flowInstanceName","(current date)","calculated","","concat(""SOA_"", xp20:current-date())","low","xp20:current-date may carry a timezone suffix depending on server settings; the exact string must equal what emp-campaign-change-sch builds. Input element flowInstanceName is ignored."
+"MR-005","Schedule window to HCM submitFlow","submitFlow/legislativeDataGroupName","(none)","hardcoded","","""PH""","low",""
+"MR-006","Schedule window to HCM submitFlow","submitFlow/recurringFlag","(none)","hardcoded","","""false""","low",""

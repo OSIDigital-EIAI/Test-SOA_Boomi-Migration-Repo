@@ -1,0 +1,4 @@
+﻿"Rule ID","Mapping","Target field","Source","Type","Condition","Function","Complexity","Notes"
+"MR-001","Request to OTBI SQL and result","sql","National_Id","conditional","National_Id != """"","Person Real Time query by National Identifier Number, Creation Date LIKE today%","medium",""
+"MR-002","Request to OTBI SQL and result","sql","CandidateID","conditional","National_Id empty","Worker Assignment Real Time query by PER_ASG_DF_CANDIDATE_ID_, Creation Date LIKE today%","medium","Employee_JobVite version only."
+"MR-003","Request to OTBI SQL and result","Person_Number","rowset Row[1]/Column1","passthrough","","","low",""

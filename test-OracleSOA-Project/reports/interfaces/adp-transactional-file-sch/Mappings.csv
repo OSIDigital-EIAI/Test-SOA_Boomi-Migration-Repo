@@ -1,0 +1,7 @@
+﻿"Rule ID","Mapping","Target field","Source","Type","Condition","Function","Complexity","Notes"
+"MR-001","Employee wage elements to ADP TR records","HEADER","(constants)","hardcoded","First employee","FNAME TR; other header constants as HRMD","low",""
+"MR-002","Employee wage elements to ADP TR records","P0014 (SUBTY, LGART, BETRG, WAERS PHP)","Person/Visa VisaPermitNumber (wage code), VisaPermitType (amount)","looped","Code in {3000,3001,3002,3003,3004,3027,3040,3044,3045,3046,3047,3050,3051,3100,3130,3200,3201,7001,9372,9374,9380,9384} and amount not in {N, PRD, """", Semi-Month, Year, Y, 0}","","medium","22 blocks."
+"MR-003","Employee wage elements to ADP TR records","P0015","Person/Visa","looped","Code in the P0015 list (42 blocks incl. 3024, 3031, 3034, 3042, 3043, 3060, 3061, 3070, 3101–3104, 3110–3112, 3120, 3121, 3131–3134, 3150, 3151, 5001, 5002) and valid amount","","medium",""
+"MR-004","Employee wage elements to ADP TR records","BEGDA","EmploymentAssignments/EffectiveStartDate","transformed","","yyyyMMdd, floor 20170926","low",""
+"MR-005","Employee wage elements to ADP TR records","P2010 SUBTY 2051, STDAZ","Person/Dependent/PersonalCode (incomplete hours)","conditional","Eligible job and hours > 0","","medium",""
+"MR-006","Employee wage elements to ADP TR records","TRAILER RECCT","records","calculated","","P0014 + P0015 + P2010 + 2","low",""
