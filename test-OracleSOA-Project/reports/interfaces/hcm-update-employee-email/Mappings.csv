@@ -1,0 +1,7 @@
+﻿"Rule ID","Mapping","Target field","Source","Type","Condition","Function","Complexity","Notes"
+"MR-001","Email request to mergePerson","attributeList/PersonNumber","PersonNumber","passthrough","","","low",""
+"MR-002","Email request to mergePerson","attributeList/PersonEmail/DateFrom","DateFrom","passthrough","","","low",""
+"MR-003","Email request to mergePerson","attributeList/PersonEmail/PersonNumber","PersonNumber","passthrough","","","low",""
+"MR-004","Email request to mergePerson","attributeList/PersonEmail/EmailType","(none)","hardcoded","","""W1""","low","Work email."
+"MR-005","Email request to mergePerson","attributeList/PersonEmail/PrimaryFlag","(none)","hardcoded","","""true""","low",""
+"MR-006","Email request to mergePerson","attributeList/PersonEmail/EmailAddress","EmailAddress","passthrough","","","low",""

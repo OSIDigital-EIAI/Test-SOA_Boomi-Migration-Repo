@@ -1,0 +1,7 @@
+﻿"Rule ID","Mapping","Target field","Source","Type","Condition","Function","Complexity","Notes"
+"MR-001","Notification request to email message","To recipients","/process/Email","transformed","","split on "","" and trim each address","low","All recipients are To; no CC/BCC."
+"MR-002","Notification request to email message","Subject","/process/Subject","passthrough","","","low",""
+"MR-003","Notification request to email message","Body (text/html)","/process/Content[1]","calculated","Content must contain at least one ""@!-"" pair","FormatEmailContent.formatContent: labels at even ""@!-"" positions -> <th>, values at odd positions -> <td>; ""!/"" inside a value -> additional rows; fixed bordered-table CSS","medium","Only the first Content element is used."
+"MR-004","Notification request to email message","From","(none)","hardcoded","","svc.soa@taskus.com","low","Becomes the Mail connection user / from address."
+"MR-005","Notification request to email message","Header X-Priority","(none)","hardcoded","","""1""","low",""
+"MR-006","Notification request to email message","processResponse/result","(none)","hardcoded","","left empty","low","The callback carries no result."

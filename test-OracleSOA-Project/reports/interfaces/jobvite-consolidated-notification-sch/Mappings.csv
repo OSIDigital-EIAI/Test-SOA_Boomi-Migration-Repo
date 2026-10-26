@@ -1,0 +1,4 @@
+﻿"Rule ID","Mapping","Target field","Source","Type","Condition","Function","Complexity","Notes"
+"MR-001","Consolidated rows to daily summary","Sno","(row position)","calculated","","position()","low",""
+"MR-002","Consolidated rows to daily summary","EmployeeId, CandidateId, FirstName, MiddleName, LastName, Status, Message","same fields","looped","each row","","low",""
+"MR-003","Consolidated rows to daily summary","Header line","(none)","hardcoded","","""SL_No, Person Number, Candidate ID, First Name, Middle Name, Last Name, Status, Message""","low",""

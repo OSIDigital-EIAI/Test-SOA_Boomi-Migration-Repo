@@ -1,0 +1,4 @@
+﻿"Rule ID","Mapping","Target field","Source","Type","Condition","Function","Complexity","Notes"
+"MR-001","Old group to member-delete request","dn","memberOf/value[i]","looped","contains ""OU=Departments"" and != newGroup","","low",""
+"MR-002","Old group to member-delete request","modifyAttributes/member/method","(none)","hardcoded","","""delete""","low",""
+"MR-003","Old group to member-delete request","modifyAttributes/member/attributeValue/value","dnValue","passthrough","","","low","User DN after the move."

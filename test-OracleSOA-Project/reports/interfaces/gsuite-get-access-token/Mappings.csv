@@ -1,0 +1,4 @@
+﻿"Rule ID","Mapping","Target field","Source","Type","Condition","Function","Complexity","Notes"
+"MR-001","Token request","grant_type","(none)","hardcoded","","""refresh_token""","low",""
+"MR-002","Token request","client_id / client_secret / refresh_token","(none)","hardcoded","","[redacted literals]","low","Move to Boomi connection; rotate."
+"MR-003","Token request","Access_Token / Token_Type / Expires_IN / Error","token response","passthrough","","","low","Response mapping."

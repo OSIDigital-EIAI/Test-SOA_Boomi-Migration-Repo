@@ -1,0 +1,4 @@
+﻿"Rule ID","Mapping","Target field","Source","Type","Condition","Function","Complexity","Notes"
+"MR-001","Salutation to HCM lookup code","Employee/Person/Prefix","SalutationLOV items LookupCode","conditional","Meaning = input Prefix","","low","Empty if no match."
+"MR-002","Acknowledgement","TransmissionAck/candidateID","Employee/CandidateID","passthrough","","","low",""
+"MR-003","Acknowledgement","TransmissionAck/status","(none)","hardcoded","","""Employee details received successfully""","low","Sent before processing."

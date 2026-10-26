@@ -1,0 +1,6 @@
+﻿"Rule ID","Mapping","Target field","Source","Type","Condition","Function","Complexity","Notes"
+"MR-001","Content ID to runReport request","reportRequest/reportAbsolutePath","(none)","hardcoded","","""/Human Capital Management/TaskUs HDL Status Report.xdo""","low",""
+"MR-002","Content ID to runReport request","parameterNameValues/item (name, label ContentID; UIType Text; dataType xsd:string)","(none)","hardcoded","","","low",""
+"MR-003","Content ID to runReport request","parameterNameValues/item/defaultValue and values/item","process/ContentId","passthrough","","","low",""
+"MR-004","Content ID to runReport request","userID / password","Credentials.dvm","transformed","","DVM lookup","low","Drop in Boomi; use connection authentication."
+"MR-005","Report output to response","DATA_DS","runReportReturn/reportBytes","calculated","","Base64 decode, strip leading comment, parse XML","medium",""

@@ -1,0 +1,4 @@
+﻿"Rule ID","Mapping","Target field","Source","Type","Condition","Function","Complexity","Notes"
+"MR-001","Payable time report to weekly incomplete hours","W1HrsCount … W4HrsCount","DATA_DS/G_1/MEASURE","calculated","Week N processed; STATUS = Approved and ELEMENT in (Regular Hours, Planned Leave, Birthday, Unplanned)","40 - sum(MEASURE), format ##.##","medium",""
+"MR-002","Employees to CSV","EmployeeId","Employee/EmployeeId (OTBI Column4 Person Number)","passthrough","","","low",""
+"MR-003","Employees to CSV","W1HrsCount … W4HrsCount","Employee/WnHrsCount","conditional","Value not empty","format-number ##.##","low",""

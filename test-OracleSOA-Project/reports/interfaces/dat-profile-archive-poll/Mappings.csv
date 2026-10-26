@@ -1,0 +1,2 @@
+﻿"Rule ID","Mapping","Target field","Source","Type","Condition","Function","Complexity","Notes"
+"MR-001","Archived INT CSV to Employees","Employees/Employee[]","CSV rows","passthrough","","NXSD parse; same element names","low","No XSLT; the BPEL uses the parsed file directly."

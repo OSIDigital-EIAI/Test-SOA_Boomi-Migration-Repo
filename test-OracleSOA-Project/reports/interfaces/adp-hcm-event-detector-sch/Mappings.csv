@@ -1,0 +1,7 @@
+﻿"Rule ID","Mapping","Target field","Source","Type","Condition","Function","Complexity","Notes"
+"MR-001","HCM events to ADP employee request","EmployeeID","Terminate rowset Column5 (Person Number)","passthrough","","","low",""
+"MR-002","HCM events to ADP employee request","EffectiveStartDate","Column6 (Termination Date)","passthrough","","","low",""
+"MR-003","HCM events to ADP employee request","LastReviewedDate","Column3 (Last Update Date)","calculated","","replace / with -, add 1 day, date part","low",""
+"MR-004","HCM events to ADP employee request","AdjustedServiceDate","$Terminate_RowSetVar/rowset/Row/Column6 (absolute)","passthrough","","","low","Defect: first row's value for every employee."
+"MR-005","HCM events to ADP employee request","CustomAttributes/Description","(constant per source)","hardcoded","terminations","""terminate""; disabled sources: newhire, namechange, taxdependentschange, rehire","low",""
+"MR-006","HCM events to ADP employee request","EmployeeID / EffectiveStartDate (disabled feeds)","Atom content PersonNumber / EffectiveDate","conditional","""Person Name Corrected/Updated"" -> namechange; ""Person Legislative Information Updated"" with MaritalStatus -> taxdependentschange; ""Person Assignment Created"" with ActionCode REHIRE -> rehire","substring parsing","medium","Inactive while the feed scopes are skipped."

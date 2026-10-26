@@ -1,0 +1,5 @@
+﻿"Rule ID","Mapping","Target field","Source","Type","Condition","Function","Complexity","Notes"
+"MR-001","Jobvite Employees JSON to INT record","Employee/* (about 75 scalar fields)","Employees/Employee/* same names","looped","each Employee","copy","low",""
+"MR-002","Jobvite Employees JSON to INT record","Employee/PhoneNumber","PhoneNumber","conditional","contains ""+""","translate(PhoneNumber, ""+"", """")","low",""
+"MR-003","Jobvite Employees JSON to INT record","EducationDetails[] / PreviousEmploymentDetails[]","same nested groups","looped","","copy","low",""
+"MR-004","Jobvite Employees JSON to INT record","Response candidateID / status","Employee[1]/ID","hardcoded","","status ""Employee details received successfully""","low",""

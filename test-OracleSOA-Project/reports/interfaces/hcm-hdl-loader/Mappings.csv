@@ -1,0 +1,8 @@
+﻿"Rule ID","Mapping","Target field","Source","Type","Condition","Function","Complexity","Notes"
+"MR-001","Caller request to UCM check-in","GenericRequest/@webKey","GenericRequest/@webKey","passthrough","","","low","Callers send ""cs""."
+"MR-002","Caller request to UCM check-in","Service/@IdcService","Service/@IdcService","passthrough","","","low","CHECKIN_UNIVERSAL."
+"MR-003","Caller request to UCM check-in","Document/Field[@name]","Document/Field","looped","","copy name and value","low","dDocTitle, dSecurityGroup FAFusionImportExport, dDocType Document, dDocAccount hcm$/dataloader$/import$."
+"MR-004","Caller request to UCM check-in","File/@name, File/@href","File/@name, File/@href","passthrough","","","low","primaryFile, e.g. Worker.zip."
+"MR-005","Caller request to UCM check-in","File/Contents","Java output","calculated","","Base64(zip of all .dat files)","medium","fn-zip-base64 in Boomi."
+"MR-006","UCM response to HDL import","ContentId","GenericResponse/Service/Document/Field[@name=""dDocName""]","conditional","'@name = dDocName","","low",""
+"MR-007","Result to response","contentID","ContentId","passthrough","","","low","HDL response (request ID) is not returned."

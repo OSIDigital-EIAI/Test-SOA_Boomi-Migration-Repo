@@ -1,0 +1,6 @@
+﻿"Rule ID","Mapping","Target field","Source","Type","Condition","Function","Complexity","Notes"
+"MR-001","Jobvite flat CSV row to Employees JSON","Employee scalar fields (~75)","same-named CSV columns","passthrough","","","low",""
+"MR-002","Jobvite flat CSV row to Employees JSON","Employee/TaxableAllowance, NonTaxableAllowance","AllowanceType, Allowance","passthrough","","","low","Renamed."
+"MR-003","Jobvite flat CSV row to Employees JSON","Employee/Location","Location","transformed","","substring-before(Location, "" "")","low","First word only."
+"MR-004","Jobvite flat CSV row to Employees JSON","Employee/PreviousEmploymentDetails[1..3]","PreviousEmployer1..3, PreviousPosition1..3, PreviousSalary1..3, dates, address, city, postcode, reason","conditional","start date of that employer present","one group per employer","medium",""
+"MR-005","Jobvite flat CSV row to Employees JSON","Employee/EducationDetails","Educational attainment columns","passthrough","","one group","low",""

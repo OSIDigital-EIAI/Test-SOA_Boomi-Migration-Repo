@@ -1,0 +1,7 @@
+﻿"Rule ID","Mapping","Target field","Source","Type","Condition","Function","Complexity","Notes"
+"MR-001","EBM + HCM row to UpdatePerson","Id","GetPersonsByQuery PersonDto/Id","passthrough","","","low",""
+"MR-002","EBM + HCM row to UpdatePerson","FirstName / LastName","OTBI s_9 / s_10","transformed","","substring(...,1,25)","low",""
+"MR-003","EBM + HCM row to UpdatePerson","JobTitle / Department / Location","OTBI s_3 / s_2 / s_4","passthrough","","","low",""
+"MR-004","EBM + HCM row to UpdatePerson","ISEmployeeID / ManagerEmailAddress","OTBI s_7 / s_6","passthrough","","","low",""
+"MR-005","EBM + HCM row to UpdatePerson","TimeZoneId","(none)","hardcoded","","""W. Europe Standard Time""","low","Differs from create (Singapore)."
+"MR-006","EBM + HCM row to UpdatePerson","ApplicationLogOnName / EmploymentNumber / Email","Person/FirstName / EmployeeID / Person/EmailAddress","passthrough","","","low",""
